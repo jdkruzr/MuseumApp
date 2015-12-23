@@ -1,0 +1,24 @@
+<h2>Search for a Story by Title or Category</h2>
+
+<%= form_tag(stories_path, method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q, @q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<h2>Filter Stories by Number of Votes</h2>
+
+<%= form_tag(stories_path, method: "get") do %>
+  <%= label_tag(:v, "Number of votes:") %>
+  <%= text_field_tag(:v, @v) %>
+  <%= submit_tag("Votes") %>
+<% end %>
+
+<h2>Show Only Stories Created Today</h2>
+
+<%= check_box_tag(:t) %>
+<%= label_tag(:t, "Today's Stories Filter") %>
+
+<h2>Add a New Story</h2>
+
+<%= link_to "Add New Story", new_story_path %>

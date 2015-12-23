@@ -1,0 +1,11 @@
+<h2>Art Museums of the World</h2>
+
+<table border=1 ><tr><td><b>Title</b></td></tr>
+	<% @museums.each do |museum| %>
+	<tr><td>
+	<%= link_to museum.name, museum_path(museum) %>
+	</td>
+	</tr>
+<% end %>
+</table>
+
